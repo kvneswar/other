@@ -29,6 +29,7 @@ public class AuthenticationController {
 		if(securityCredentials == null){
 			responseEntity = new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 		}else{
+			securityCredentials.setPassword(null);
 			responseEntity = new ResponseEntity<>(HttpStatus.OK);
 		}
 		return responseEntity;
